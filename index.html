@@ -117,43 +117,6 @@
             padding: 0 15px;
         }
 
-        /* BLOQUE DE PROMOCIONES ESPECIALES (NUEVO) */
-        .bloque-promocion {
-            background-color: var(--bg-tarjeta);
-            border: 2px solid var(--rojo-fuego);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 0 15px rgba(211, 47, 47, 0.4);
-        }
-
-        .promo-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-            font-size: 15px;
-            text-align: left;
-        }
-
-        .promo-item:last-child {
-            border-bottom: none;
-        }
-
-        .promo-texto {
-            font-weight: 600;
-            padding-right: 10px;
-        }
-
-        .promo-precio {
-            color: var(--dorado-brasa);
-            font-weight: 800;
-            font-size: 18px;
-            white-space: nowrap;
-        }
-
         /* SECCIÓN UBICACIÓN Y HORARIOS DESTACADOS */
         .bloque-destacado {
             background-color: var(--bg-tarjeta);
@@ -219,4 +182,540 @@
             background-color: rgba(255,255,255,0.05);
             padding: 8px;
             border-radius: 4px;
-            border-left:
+            border-left: 3px solid var(--rojo-fuego);
+            text-align: left;
+        }
+
+        /* INSTALACIONES DE VERANO */
+        .bloque-instalaciones {
+            background: linear-gradient(135deg, #1e1e1e 0%, #1a2416 100%);
+            border: 1px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .instalaciones-detalles {
+            font-size: 15px;
+            margin-top: 10px;
+            color: var(--blanco);
+        }
+
+        .instalaciones-detalles span {
+            display: block;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        /* ESTILOS DE LA CARTA (MENÚ) */
+        .seccion-carta {
+            margin-top: 35px;
+        }
+
+        .categoria-titulo {
+            color: var(--dorado-brasa);
+            font-size: 22px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--rojo-fuego);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            letter-spacing: 1px;
+        }
+
+        .plato-item {
+            background-color: var(--bg-tarjeta);
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .plato-cabecera {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 15px;
+            color: var(--blanco);
+        }
+
+        .plato-precio {
+            color: var(--dorado-brasa);
+            font-size: 16px;
+        }
+
+        .plato-descripcion {
+            font-size: 13px;
+            color: var(--gris-texto);
+            margin-top: 4px;
+        }
+
+        /* SECCIÓN RESEÑAS GOOGLE MAPS EMOTIVA */
+        .bloque-resenas {
+            background-color: var(--bg-tarjeta);
+            border: 2px solid var(--dorado-brasa);
+            padding: 25px 20px;
+            margin: 35px 0 20px 0;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(255,179,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bloque-resenas::before {
+            content: "⭐ ⭐ ⭐ ⭐ ⭐";
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        .texto-resena-emotivo {
+            font-size: 14px;
+            color: var(--blanco);
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .btn-maps {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--dorado-brasa) 0%, #ff8f00 100%);
+            color: #000;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 14px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255,179,0,0.4);
+            transition: transform 0.2s;
+            font-size: 14px;
+        }
+
+        .btn-maps:active {
+            transform: scale(0.95);
+        }
+
+        /* BOTONES DE LLAMADA FIJOS INFERIORES */
+        .barra-fija-pedidos {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #000000;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            padding: 10px;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.8);
+            z-index: 1000;
+            border-top: 2px solid var(--rojo-fuego);
+        }
+
+        .btn-telefono {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 6px;
+        }
+
+        .btn-llamada-1 {
+            background-color: #2e7d32; /* Verde Éxito */
+        }
+
+        .btn-llamada-2 {
+            background-color: #1565c0; /* Azul Corporativo */
+        }
+
+        .btn-telefono span {
+            font-size: 11px;
+            color: rgba(255,255,255,0.8);
+            font-weight: normal;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-logo-container">
+        <div class="logo-circular">
+            <div class="logo-text-top">Restaurante</div>
+            <div class="logo-llama">🔥</div>
+            <div class="logo-marca">LA LLAMARADA</div>
+            <div class="logo-text-bottom">UN SITIO GENIAL</div>
+        </div>
+        <p class="slogan-principal">El Sabor de Argentina en Cada Bocado</p>
+    </div>
+
+    <div class="container">
+
+        <div class="bloque-destacado">
+            <h2 class="titulo-resaltado">📍 ¿DÓNDE ESTAMOS UBICADOS?</h2>
+            <p class="texto-ubicacion">PLAZA DE ENXANETA 2<br><span style="color: var(--dorado-brasa)">Vilanova i la Geltrú</span></p>
+        </div>
+
+        <div class="bloque-destacado">
+            <h2 class="titulo-resaltado" style="color: var(--rojo-fuego);">🕒 NUESTRO HORARIO SEMANAL</h2>
+            <div style="margin-top: 10px;">
+                <div class="horario-linea cerrado"><span>Lunes:</span> <span>CERRADO 🚫</span></div>
+                <div class="horario-linea cerrado"><span>Martes:</span> <span>CERRADO 🚫</span></div>
+                <div class="horario-linea"><span>Miércoles:</span> <span>12:30 a 16:00 / 19:30 a 23:30</span></div>
+                <div class="horario-linea"><span>Jueves:</span> <span>12:30 a 16:00 / 19:30 a 23:30</span></div>
+                <div class="horario-linea"><span>Viernes:</span> <span>12:30 a 16:00 / 19:30 a 23:30</span></div>
+                <div class="horario-linea"><span>Sábado:</span> <span>12:30 a 16:00 / 19:30 a 23:30</span></div>
+                <div class="horario-linea"><span>Domingo:</span> <span>12:30 a 16:00 / 19:30 a 23:30</span></div>
+            </div>
+        </div>
+
+        <div class="bloque-instalaciones">
+            <h2 class="titulo-resaltado" style="color: #4caf50;">☀️ DISFRUTA ESTE VERANO CON NOSOTROS</h2>
+            <div class="instalaciones-detalles">
+                <span>🌿 TERRAZA AL AIRE LIBRE</span>
+                <p style="font-size: 13px; color: var(--gris-texto); margin-bottom: 8px;">El ambiente ideal para disfrutar de tus noches veraniegas.</p>
+                <span>❄️ SALÓN CON AIRE ACONDICIONADO</span>
+                <p style="font-size: 13px; color: var(--gris-texto);">Espacio climatizado y confortable con capacidad para 45 personas.</p>
+            </div>
+        </div>
+
+        <div class="bloque-reparto">
+            <h2 class="titulo-resaltado" style="color: var(--blanco);">🛵 SERVICIO A DOMICILIO</h2>
+            <p style="font-size: 13px; color: var(--gris-texto);">Repartos profesionales en las siguientes zonas oficiales:</p>
+            <div class="zonas-grid">
+                <div class="zona-item">📍 Sant Pere de Ribes</div>
+                <div class="zona-item">📍 Sitges</div>
+                <div class="zona-item">📍 Roquetes</div>
+                <div class="zona-item">📍 Cubelles</div>
+                <div class="zona-item">📍 Taradell (Cubelles)</div>
+                <div class="zona-item">📍 Vilanova i la Geltrú</div>
+            </div>
+        </div>
+
+        <div class="seccion-carta">
+            
+            <h3 class="categoria-titulo">Tapas</h3>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Patatas Bravas</span><span class="plato-precio">6.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Patatas Llamarada</span><span class="plato-precio">7.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Patatas Fritas</span><span class="plato-precio">4.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Calamares a la Romana</span><span class="plato-precio">7.50€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Croquetas</span><span class="plato-precio">6.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Alitas de Pollo</span><span class="plato-precio">7.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Chocos</span><span class="plato-precio">8.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Provolone</span><span class="plato-precio">9.50€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Nuggets con Patatas</span><span class="plato-precio">6.50€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Sevillanos</span><span class="plato-precio">7.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Tequeños</span><span class="plato-precio">7.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Aros de Cebolla</span><span class="plato-precio">6.50€</span></div>
+            </div>
+
+            <h3 class="categoria-titulo">Ensaladas</h3>
+            <div class="plato-item" style="border-left: 3px solid var(--dorado-brasa);">
+                <div class="plato-cabecera"><span>Ensalada César ✨</span><span class="plato-precio">11.00€</span></div>
+                <div class="plato-descripcion">Novedad especial de la casa. El balance fresco perfecto para tu comida.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Ensalada de Queso de Cabra</span><span class="plato-precio">12.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Ensalada Mixta</span><span class="plato-precio">7.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Ensalada Llamarada</span><span class="plato-precio">11.00€</span></div>
+            </div>
+
+            <h3 class="categoria-titulo">Empanadas Argentinas</h3>
+            <p style="font-size: 12px; color: var(--dorado-brasa); margin-bottom: 10px; padding-left: 5px;">Precio por unidad: 3.50€</p>
+            <div class="plato-item"><div class="plato-cabecera"><span>Pollo</span><span class="plato-precio">3.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Carne</span><span class="plato-precio">3.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Humita</span><span class="plato-precio">3.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Jamón y Queso</span><span class="plato-precio">3.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Capresse</span><span class="plato-precio">3.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Criolla</span><span class="plato-precio">3.50€</span></div></div>
+
+            <h3 class="categoria-titulo">Carnes a la Parrilla</h3>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Parrillada La Llamarada</span><span class="plato-precio">42.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Solomillo</span><span class="plato-precio">26.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Bife Argentino</span><span class="plato-precio">20.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Entrecot</span><span class="plato-precio">19.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Asado de Tira</span><span class="plato-precio">14.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Entraña</span><span class="plato-precio">17.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Vacio</span><span class="plato-precio">17.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Chuletas de Cordero</span><span class="plato-precio">16.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Chorizo Criollo Ración</span><span class="plato-precio">5.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Chorizo Criollo (Unidad)</span><span class="plato-precio">2.90€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Mollejas</span><span class="plato-precio">15.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Morcilla Ración</span><span class="plato-precio">5.00€</span></div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Morcilla Unidad</span><span class="plato-precio">2.50€</span></div>
+            </div>
+
+            <h3 class="categoria-titulo">Milanesas</h3>
+            <p style="font-size: 12px; color: var(--dorado-brasa); margin-bottom: 10px; padding-left: 5px;">⚠️ Todas nuestras milanesas van acompañadas con patatas fritas</p>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Clásica</span><span class="plato-precio">11.00€</span></div>
+                <div class="plato-descripcion">Carne rebozada tradicional.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Milanesa Napolitana</span><span class="plato-precio">16.00€</span></div>
+                <div class="plato-descripcion">Jamón, bacon, mozzarella, tomate en rodajas y huevos.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Nápoles</span><span class="plato-precio">16.50€</span></div>
+                <div class="plato-descripcion">Mozzarella, rodajas de tomate, ajo y perejil.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>La Brava</span><span class="plato-precio">17.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, pimiento picante y guindillas.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Capresse</span><span class="plato-precio">17.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, rodajas de tomate, pesto y mozzarella de búfala.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>5 Quesos</span><span class="plato-precio">18.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, roquefort, emmental, cheddar y queso de cabra.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Fugazza</span><span class="plato-precio">16.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, cebolla y pimienta negra.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Americana</span><span class="plato-precio">18.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, bacon, cebolla, salsa barbacoa y huevos.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Especial</span><span class="plato-precio">17.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, jamón dulce, pimiento rojo y huevo duro.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>La Gringa</span><span class="plato-precio">19.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, bacon, frankfurt, cebolla, salsa barbacoa y huevos.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Tropical</span><span class="plato-precio">17.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, jamón dulce y piña.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>La Huerta</span><span class="plato-precio">18.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, pimiento rojo, olivas, cebolla y champiñones.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>La Blanca</span><span class="plato-precio">17.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, salsa carbonara y champiñones.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Pioner Team</span><span class="plato-precio">18.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, pimiento rojo, jamón, guindillas y olivas negras.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>La Llamarada</span><span class="plato-precio">18.00€</span></div>
+                <div class="plato-descripcion">Mozzarella, chorizo criollo, chimichurri, cebolla y huevo.</div>
+            </div>
+
+            <h3 class="categoria-titulo">Pizzas</h3>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Mozzarella</span><span class="plato-precio">8.00€</span></div>
+                <div class="plato-descripcion">Base con tomate and mozzarella.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>La Llamarada</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, queso, chorizo criollo, cebolla, carne y chimichurri.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Carbonara</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate y salsa carbonara.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Huevo Jamón y Bacon</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, huevo, jamón y bacon.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Jamón y Queso</span><span class="plato-precio">9.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella y jamón.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Especial</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, jamón, pimiento y huevo duro.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Samu</span><span class="plato-precio">10.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, jamón y bacon.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Vegetal</span><span class="plato-precio">11.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, cebolla, champiñones, alcachofas, maíz, pimiento rojo y oliva.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Jamón y Piña</span><span class="plato-precio">10.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, jamón y piña.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Peperoni</span><span class="plato-precio">10.00€</span></div>
+                <div class="plato-descripcion">Base con tomate y mozzarella con peperoni.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Criolla</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, carne picada, morcilla y chorizo criollo.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Fugassa</span><span class="plato-precio">10.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, cebolla y mozzarella.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Sobrasada</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella y sobrasada.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>6 Quesos</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, cheddar, emmental, azul, cabra y provolone.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Atún, Pimientos y Olivas</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, atún, pimiento y olivas.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Cuatro Quesos</span><span class="plato-precio">11.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, roquefort, emmental y cabra.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Cuatro Estaciones</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, jamón dulce, alcachofas, champiñones, anchoas y olivas.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>De Carne</span><span class="plato-precio">11.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella y carne picada condimentada.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Salmón y Gambas</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, salmón y gambas.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Napolitana</span><span class="plato-precio">10.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, tomate natural en rodajas, ajo y perejil.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Frankfurt</span><span class="plato-precio">10.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella y frankfurt.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Pollo</span><span class="plato-precio">11.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, maíz, cebolla y pollo.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Serranita</span><span class="plato-precio">12.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, jamón serrano y queso de cabra.</div>
+            </div>
+            <div class="plato-item">
+                <div class="plato-cabecera"><span>Barbacoa</span><span class="plato-precio">11.00€</span></div>
+                <div class="plato-descripcion">Base con tomate, mozzarella, carne y salsa barbacoa.</div>
+            </div>
+
+            <h3 class="categoria-titulo">Postres</h3>
+            <div class="plato-item"><div class="plato-cabecera"><span>Cheesecake</span><span class="plato-precio">6.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Flan</span><span class="plato-precio">4.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Profiteroles</span><span class="plato-precio">4.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Crema Catalana</span><span class="plato-precio">4.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Crepe Dulce de Leche</span><span class="plato-precio">5.00€</span></div></div>
+
+            <h3 class="categoria-titulo">Bebidas y Bodega</h3>
+            <div class="plato-item" style="border-left: 3px solid var(--dorado-brasa);">
+                <div class="plato-cabecera"><span>Botella de Vino de la Casa (Blanco / Tinto) 🍷</span><span class="plato-precio">11.00€</span></div>
+                <div class="plato-descripcion">Selección especial de nuestra bodega para maridar tus carnes.</div>
+            </div>
+            <div class="plato-item" style="border-left: 3px solid var(--dorado-brasa);">
+                <div class="plato-cabecera"><span>Vinos de Marca 🍾</span><span class="plato-precio">16.00€</span></div>
+                <div class="plato-descripcion">Botellas premium seleccionadas. Pregunta por nuestras etiquetas disponibles.</div>
+            </div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Coca-Cola</span><span class="plato-precio">2.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Nestea</span><span class="plato-precio">2.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Aquarade</span><span class="plato-precio">2.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Kas Limón</span><span class="plato-precio">2.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Kas Naranja</span><span class="plato-precio">2.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Agua</span><span class="plato-precio">2.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Cerveza Amstel</span><span class="plato-precio">2.60€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Cerveza Águila</span><span class="plato-precio">2.60€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Amstel Tostada</span><span class="plato-precio">2.70€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Vino (Copa)</span><span class="plato-precio">3.00€</span></div></div>
+        </div>
+
+        <div class="bloque-resenas">
+            <h2 class="titulo-resaltado">¡En La Llamarada Vilanova queremos saber tu opinión!</h2>
+            <p class="texto-resena-emotivo">
+                "En La Llamarada, cada plato que preparamos lleva el alma de nuestra cocina y el deseo de darte un momento único. Tu experiencia es el motor que nos ayuda a mejorar día a día. Publica una reseña en nuestro perfil y cuéntanos qué tal te fue."
+            </p>
+            <a href="https://g.page/r/CXABZvDkKoP0EBE/review" class="btn-maps" target="_blank">⭐ DEJAR MI RESEÑA AL INSTANTE</a>
+        </div>
+
+    </div>
+
+    <div class="barra-fija-pedidos">
+        <a href="tel:600301706" class="btn-telefono btn-llamada-1">
+            <span>Haz tu pedido</span>
+            📞 600 301 706
+        </a>
+        <a href="tel:938144831" class="btn-telefono btn-llamada-2">
+            <span>Atención Cliente</span>
+            📞 938 144 831
+        </a>
+    </div>
+
+</body>
+</html>
+
