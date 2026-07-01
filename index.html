@@ -12,6 +12,8 @@
             --dorado-brasa: #ffb300;
             --blanco: #ffffff;
             --gris-texto: #b0bec5;
+            --promo-bg: #2a1111;
+            --promo-borde: #ff5722;
         }
 
         * {
@@ -157,6 +159,74 @@
         .horario-linea.cerrado {
             color: var(--rojo-fuego);
             font-weight: bold;
+        }
+
+        /* SECCIÓN ULTRA LLAMATIVA DE PROMOCIONES EN PIZZAS */
+        .seccion-promos-pizzas {
+            background: linear-gradient(135deg, var(--promo-bg) 0%, #121212 100%);
+            border: 3px dashed var(--promo-borde);
+            border-radius: 16px;
+            padding: 25px 20px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255, 87, 34, 0.4);
+            animation: pulse-border 2s infinite alternate;
+        }
+
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 15px rgba(255, 87, 34, 0.3); }
+            100% { box-shadow: 0 0 30px rgba(255, 179, 0, 0.6); }
+        }
+
+        .titulo-promo-gigante {
+            color: #fff;
+            background-color: var(--promo-borde);
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .tarjeta-promo {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid var(--dorado-brasa);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta-promo:last-child {
+            margin-bottom: 0;
+        }
+
+        .promo-header {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--dorado-brasa);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .promo-sub {
+            font-size: 15px;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .promo-condicion {
+            font-size: 13px;
+            color: var(--gris-texto);
+            font-style: italic;
+            border-top: 1px dashed rgba(255,255,255,0.2);
+            padding-top: 6px;
+            margin-top: 6px;
         }
 
         /* SERVICIO A DOMICILIO */
@@ -378,6 +448,22 @@
             </div>
         </div>
 
+        <div class="seccion-promos-pizzas">
+            <h2 class="titulo-promo-gigante">🔥 ¡PROMO PIZZAS! 🔥</h2>
+            
+            <div class="tarjeta-promo">
+                <div class="promo-header">🍕 2 PIZZAS POR SOLO 18€</div>
+                <div class="promo-sub">¡Elige tus dos combinaciones favoritas!</div>
+                <div class="promo-condicion">Válido para Miércoles y Jueves (Recogida en local o domicilio)</div>
+            </div>
+
+            <div class="tarjeta-promo">
+                <div class="promo-header">🥤 PIZZA INDIVIDUAL + BEBIDA</div>
+                <div class="promo-sub">Cualquier Pizza de la carta + Refresco o Cerveza por solo 12.50€</div>
+                <div class="promo-condicion">Válido todos los días al mediodía</div>
+            </div>
+        </div>
+
         <div class="bloque-instalaciones">
             <h2 class="titulo-resaltado" style="color: #4caf50;">☀️ DISFRUTA ESTE VERANO CON NOSOTROS</h2>
             <div class="instalaciones-detalles">
@@ -404,57 +490,27 @@
         <div class="seccion-carta">
             
             <h3 class="categoria-titulo">Tapas</h3>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Patatas Bravas</span><span class="plato-precio">6.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Patatas Llamarada</span><span class="plato-precio">7.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Patatas Fritas</span><span class="plato-precio">4.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Calamares a la Romana</span><span class="plato-precio">7.50€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Croquetas</span><span class="plato-precio">6.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Alitas de Pollo</span><span class="plato-precio">7.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Chocos</span><span class="plato-precio">8.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Provolone</span><span class="plato-precio">9.50€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Nuggets con Patatas</span><span class="plato-precio">6.50€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Sevillanos</span><span class="plato-precio">7.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Tequeños</span><span class="plato-precio">7.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Aros de Cebolla</span><span class="plato-precio">6.50€</span></div>
-            </div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Patatas Bravas</span><span class="plato-precio">6.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Patatas Llamarada</span><span class="plato-precio">7.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Patatas Fritas</span><span class="plato-precio">4.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Calamares a la Romana</span><span class="plato-precio">7.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Croquetas</span><span class="plato-precio">6.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Alitas de Pollo</span><span class="plato-precio">7.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Chocos</span><span class="plato-precio">8.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Provolone</span><span class="plato-precio">9.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Nuggets con Patatas</span><span class="plato-precio">6.50€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Sevillanos</span><span class="plato-precio">7.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Tequeños</span><span class="plato-precio">7.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Aros de Cebolla</span><span class="plato-precio">6.50€</span></div></div>
 
             <h3 class="categoria-titulo">Ensaladas</h3>
             <div class="plato-item" style="border-left: 3px solid var(--dorado-brasa);">
                 <div class="plato-cabecera"><span>Ensalada César ✨</span><span class="plato-precio">11.00€</span></div>
                 <div class="plato-descripcion">Novedad especial de la casa. El balance fresco perfecto para tu comida.</div>
             </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Ensalada de Queso de Cabra</span><span class="plato-precio">12.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Ensalada Mixta</span><span class="plato-precio">7.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Ensalada Llamarada</span><span class="plato-precio">11.00€</span></div>
-            </div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Ensalada de Queso de Cabra</span><span class="plato-precio">12.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Ensalada Mixta</span><span class="plato-precio">7.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Ensalada Llamarada</span><span class="plato-precio">11.00€</span></div></div>
 
             <h3 class="categoria-titulo">Empanadas Argentinas</h3>
             <p style="font-size: 12px; color: var(--dorado-brasa); margin-bottom: 10px; padding-left: 5px;">Precio por unidad: 3.50€</p>
@@ -466,45 +522,19 @@
             <div class="plato-item"><div class="plato-cabecera"><span>Criolla</span><span class="plato-precio">3.50€</span></div></div>
 
             <h3 class="categoria-titulo">Carnes a la Parrilla</h3>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Parrillada La Llamarada</span><span class="plato-precio">42.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Solomillo</span><span class="plato-precio">26.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Bife Argentino</span><span class="plato-precio">20.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Entrecot</span><span class="plato-precio">19.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Asado de Tira</span><span class="plato-precio">14.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Entraña</span><span class="plato-precio">17.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Vacio</span><span class="plato-precio">17.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Chuletas de Cordero</span><span class="plato-precio">16.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Chorizo Criollo Ración</span><span class="plato-precio">5.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Chorizo Criollo (Unidad)</span><span class="plato-precio">2.90€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Mollejas</span><span class="plato-precio">15.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Morcilla Ración</span><span class="plato-precio">5.00€</span></div>
-            </div>
-            <div class="plato-item">
-                <div class="plato-cabecera"><span>Morcilla Unidad</span><span class="plato-precio">2.50€</span></div>
-            </div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Parrillada La Llamarada</span><span class="plato-precio">42.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Solomillo</span><span class="plato-precio">26.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Bife Argentino</span><span class="plato-precio">20.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Entrecot</span><span class="plato-precio">19.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Asado de Tira</span><span class="plato-precio">14.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Entraña</span><span class="plato-precio">17.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Vacio</span><span class="plato-precio">17.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Chuletas de Cordero</span><span class="plato-precio">16.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Chorizo Criollo Ración</span><span class="plato-precio">5.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Chorizo Criollo (Unidad)</span><span class="plato-precio">2.90€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Mollejas</span><span class="plato-precio">15.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Morcilla Ración</span><span class="plato-precio">5.00€</span></div></div>
+            <div class="plato-item"><div class="plato-cabecera"><span>Morcilla Unidad</span><span class="plato-precio">2.50€</span></div></div>
 
             <h3 class="categoria-titulo">Milanesas</h3>
             <p style="font-size: 12px; color: var(--dorado-brasa); margin-bottom: 10px; padding-left: 5px;">⚠️ Todas nuestras milanesas van acompañadas con patatas fritas</p>
@@ -718,4 +748,3 @@
 
 </body>
 </html>
-
